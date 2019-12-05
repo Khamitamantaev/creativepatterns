@@ -27,7 +27,6 @@ public class Student {
             this.agestudent = agestudent;
             this.highstudent = highstudent;
         }
-        public StudentMaker(String khamit, int agestudent, double highstudent, String )
 
 
         public Student build() {
