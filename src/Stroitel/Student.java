@@ -20,6 +20,21 @@ public class Student {
         private final int agestudent;// лет
         private final double highstudent;// рост
 
+        public String getStudentname() {
+            return studentname;
+        }
+
+        public String getSurnamestudent() {
+            return surnamestudent;
+        }
+
+        public int getAgestudent() {
+            return agestudent;
+        }
+
+        public double getHighstudent() {
+            return highstudent;
+        }
 
         public StudentMaker(String studentname, String surnamestudent, int agestudent, double highstudent) {
             this.studentname = studentname;
