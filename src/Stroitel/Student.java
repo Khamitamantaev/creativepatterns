@@ -6,7 +6,8 @@ public class Student {
     private int agestudent;// лет
     private double highstudent;// рост
 
-    public Student(StudentMaker studentMaker) {
+
+    private Student(StudentMaker studentMaker) {
         super();
         this.studentname = studentMaker.studentname;
         this.agestudent = studentMaker.agestudent;
@@ -20,39 +21,27 @@ public class Student {
         private final int agestudent;// лет
         private final double highstudent;// рост
 
-        public String getStudentname() {
-            return studentname;
-        }
-
-        public String getSurnamestudent() {
-            return surnamestudent;
-        }
-
-        public int getAgestudent() {
-            return agestudent;
-        }
-
-        public double getHighstudent() {
-            return highstudent;
-        }
-
         public StudentMaker(String studentname, String surnamestudent, int agestudent, double highstudent) {
             this.studentname = studentname;
             this.surnamestudent = surnamestudent;
             this.agestudent = agestudent;
             this.highstudent = highstudent;
         }
+        public StudentMaker(String khamit, int agestudent, double highstudent, String )
 
-        @Override
-        public String toString() {
-            return "Student {" +
-                    "name='" + studentname + '\'' +
-                    ", surname='" + surnamestudent + '\'' +
-                    ", age=" + agestudent +
-                    ", high=" + highstudent +
-                    '}';
+
+        public Student build() {
+            return new Student(this);
         }
     }
 
-
+    @Override
+    public String toString() {
+        return "Student {" +
+                "name='" + studentname + '\'' +
+                ", surname='" + surnamestudent + '\'' +
+                ", age=" + agestudent +
+                ", high=" + highstudent +
+                '}';
+    }
 }
